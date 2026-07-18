@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#11823b">
+  <title>Soccer Penalty Challenge</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game" aria-labelledby="game-title">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Ready, set, kick!</p>
+        <h1 id="game-title">Soccer Penalty Challenge</h1>
+      </div>
+      <button class="mute-button" id="mute-button" type="button" aria-pressed="false" aria-label="Mute sounds">
+        <span id="mute-icon" aria-hidden="true">🔊</span>
+        <span id="mute-label">Sound On</span>
+      </button>
+    </header>
+
+    <section class="scoreboard" aria-label="Game score">
+      <div><span class="score-label">Score</span><strong id="score">0</strong></div>
+      <div><span class="score-label">Shots Left</span><strong id="shots-left">10</strong></div>
+    </section>
+
+    <section class="field" aria-label="Soccer field and goal">
+      <div class="crowd" aria-hidden="true">🎉 ⭐ 🎉 ⭐ 🎉 ⭐ 🎉 ⭐ 🎉</div>
+      <div class="goal">
+        <div class="net" aria-hidden="true"></div>
+        <div class="goalkeeper" id="goalkeeper" aria-label="Goalkeeper">
+          <span class="keeper-head">🙂</span>
+          <span class="keeper-body"></span>
+          <span class="keeper-arm arm-left"></span>
+          <span class="keeper-arm arm-right"></span>
+          <span class="keeper-leg leg-left"></span>
+          <span class="keeper-leg leg-right"></span>
+        </div>
+        <div class="ball" id="ball" aria-label="Soccer ball">⚽</div>
+      </div>
+      <div class="result" id="result" role="status" aria-live="assertive">Choose your shot!</div>
+    </section>
+
+    <section class="controls" aria-label="Choose where to shoot">
+      <p class="instructions">Tap a button or use your arrow keys</p>
+      <div class="direction-buttons">
+        <button class="direction left" type="button" data-direction="left">
+          <span class="arrow" aria-hidden="true">←</span><span>Left</span>
+        </button>
+        <button class="direction center" type="button" data-direction="center">
+          <span class="arrow" aria-hidden="true">↓</span><span>Center</span>
+        </button>
+        <button class="direction right" type="button" data-direction="right">
+          <span class="arrow" aria-hidden="true">→</span><span>Right</span>
+        </button>
+      </div>
+    </section>
+
+    <div class="game-over" id="game-over" hidden>
+      <div class="game-over-card" role="dialog" aria-modal="true" aria-labelledby="final-title">
+        <div class="trophy" aria-hidden="true">🏆</div>
+        <h2 id="final-title">Great Kicking!</h2>
+        <p>You scored <strong id="final-score">0</strong> out of 10!</p>
+        <button id="play-again" type="button">Play Again</button>
+      </div>
+    </div>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
