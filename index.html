@@ -26,19 +26,25 @@
     </section>
 
     <section class="field" aria-label="Soccer field and goal">
-      <div class="crowd" aria-hidden="true">🎉 ⭐ 🎉 ⭐ 🎉 ⭐ 🎉 ⭐ 🎉</div>
+      <div class="stadium-lights" aria-hidden="true"></div>
+      <div class="crowd" aria-hidden="true"></div>
+      <div class="pitch-perspective" aria-hidden="true">
+        <span class="touchline touchline-left"></span>
+        <span class="touchline touchline-right"></span>
+        <span class="penalty-box-line"></span>
+      </div>
       <div class="goal">
         <div class="net" aria-hidden="true"></div>
         <div class="goalkeeper" id="goalkeeper" aria-label="Goalkeeper">
-          <span class="keeper-head">🙂</span>
-          <span class="keeper-body"></span>
-          <span class="keeper-arm arm-left"></span>
-          <span class="keeper-arm arm-right"></span>
-          <span class="keeper-leg leg-left"></span>
-          <span class="keeper-leg leg-right"></span>
+          <img src="assets/goalkeeper-real.png" alt="" draggable="false">
         </div>
-        <div class="ball" id="ball" aria-label="Soccer ball">⚽</div>
       </div>
+      <div class="penalty-spot" aria-hidden="true"></div>
+      <div class="ball-shadow" aria-hidden="true"></div>
+      <div class="penalty-player" id="penalty-player" aria-label="Penalty taker">
+        <img src="assets/penalty-player-real.png" alt="" draggable="false">
+      </div>
+      <div class="ball" id="ball" aria-label="Soccer ball">⚽</div>
       <div class="result" id="result" role="status" aria-live="assertive">Choose your shot!</div>
     </section>
 

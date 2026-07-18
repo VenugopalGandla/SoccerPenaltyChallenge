@@ -6,6 +6,7 @@ const shotsDisplay = document.querySelector("#shots-left");
 const resultDisplay = document.querySelector("#result");
 const ball = document.querySelector("#ball");
 const goalkeeper = document.querySelector("#goalkeeper");
+const penaltyPlayer = document.querySelector("#penalty-player");
 const directionButtons = [...document.querySelectorAll(".direction")];
 const gameOverScreen = document.querySelector("#game-over");
 const finalScoreDisplay = document.querySelector("#final-score");
@@ -75,6 +76,7 @@ function takeShot(playerDirection) {
 
   const keeperDirection = getRandomDirection();
   ball.className = `ball shoot-${playerDirection}`;
+  penaltyPlayer.className = `penalty-player kick-${playerDirection}`;
   goalkeeper.className = `goalkeeper dive-${keeperDirection}`;
 
   window.setTimeout(() => {
@@ -97,6 +99,7 @@ function takeShot(playerDirection) {
 
     window.setTimeout(() => {
       ball.className = "ball";
+      penaltyPlayer.className = "penalty-player";
       goalkeeper.className = "goalkeeper";
 
       if (shotsLeft === 0) {
@@ -136,6 +139,7 @@ function resetGame() {
   resultDisplay.textContent = "Choose your shot!";
   resultDisplay.className = "result";
   ball.className = "ball";
+  penaltyPlayer.className = "penalty-player";
   goalkeeper.className = "goalkeeper";
   gameOverScreen.hidden = true;
   setButtonsDisabled(false);
